@@ -11,8 +11,7 @@ import { getUser } from "../../utilities/users-service"
 
 
 export default function App() {
-  const [user, setUser] = useState("A"); //getUser()
-  console.log("this is user in App", user)
+  const [user, setUser] = useState(getUser());
 
   return (
     <main className="App">

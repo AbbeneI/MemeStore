@@ -16,6 +16,7 @@ async function getAllForUser(req, res) {
 
 // A cart is the unpaid order for a user
 async function cart(req, res) {
+    console.log('\nDebugging Cart controller\n')
     const cart = await Order.getCart(req.user._id);
     res.json(cart);
 }

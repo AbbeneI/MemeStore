@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import * as userService from "../../utilities/users-service"
-import logo from "../Logo/Logo.jsx"
-import IanLogo from "./logo.svg"
+import Logo from "../Logo/Logo.svg"
 import "./NavBar.css"
 
 export default function NavBar({ user, setUser }) {
@@ -13,15 +12,21 @@ export default function NavBar({ user, setUser }) {
 
     return (
         <nav>
-            <img src={IanLogo} alt="logo" className='logo'></img>
-            {/* {logo} */}
+            {/* <img src={Logo} alt="logo" className='logo'></img> */}
             <Link to="/">Memes</Link>
             &nbsp;&nbsp;|&nbsp;&nbsp;
             <Link to="/orders">Order History</Link>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-            <Link to="/orders/new">New Order</Link>
-            &nbsp;&nbsp;<span>Welcome, {user.name}</span>
-            &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
+            {/* <Link to="/orders/new">New Order</Link> */}
+            &nbsp;&nbsp;
+            <div className='user-container'>
+                <Link to="/profile">
+                    <img className='user-pfp' src={user.pfp ? user.pfp : 'https://i.pinimg.com/originals/51/2c/2d/512c2df42555717bad4833fb49cfd4bd.jpg'}></img>
+                    <span>{user.name}</span>
+                </Link>
+            </div>
+
+            {/* &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link> */}
 
         </nav>
     )

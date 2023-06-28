@@ -39,11 +39,22 @@
 }
 
 body {
-  /* background: var(--black);
-  color: var(--white); */
+  background-color: #1F1D2A;
+  color: var(--white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--grey);
 }
 
 :root {
   --black: rgb(29, 29, 29);
   --white: rgb(241, 241, 241);
+  --grey: rgb(203, 203, 203);
+
 }

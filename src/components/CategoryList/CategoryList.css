@@ -1,0 +1,21 @@
+li {
+    list-style-type: none;
+    text-align: left;
+}
+
+.side-nav-li {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vmin;
+}
+
+.side-nav-li-icon {
+    --d: 20px;
+    height: var(--d);
+    width: var(--d);
+    border-radius: 4px;
+    background-color: white;
+
+}

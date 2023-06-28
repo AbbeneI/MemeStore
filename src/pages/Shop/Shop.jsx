@@ -4,6 +4,8 @@ import OrderDetail from "../../components/OrderDetail/OrderDetail";
 import * as itemsAPI from "../../utilities/items-apis"
 import * as ordersAPI from "../../utilities/orders-apis"
 
+import "./Shop.css"
+
 import { useState, useEffect, useRef } from 'react';
 
 export default function Shop() {
@@ -33,10 +35,18 @@ export default function Shop() {
 
     return (
         <>
-            <h3>
+            <div className="side-nav">
                 <CategoryList categories={categoriesRef.current} />
-            </h3>
-            <div>
+            </div>
+
+            <div className="shop">
+                <div className="discover-container">
+                    <h3>Discover</h3>
+                    <div className="main-content">
+                        <div className="content-1"></div>
+                        <div className="content-2"></div>
+                    </div>
+                </div>
                 {shopItems.length ?
                     <ShopList shopItems={shopItems} />
                     :

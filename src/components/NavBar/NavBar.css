@@ -4,3 +4,32 @@
     width: var(--x);
     filter: invert(100%) sepia(27%) saturate(5371%) hue-rotate(180deg) brightness(107%) contrast(116%);
 }
+
+.user-container,
+.user-container a {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1vw;
+}
+
+.user-pfp {
+    --x: 30px;
+    height: var(--x);
+    width: var(--x);
+    border-radius: 50%;
+
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid black;
+    height: 75px;
+    width: 100%;
+}

@@ -10,24 +10,24 @@ const User = require('./models/user');
 (async function () {
     await Category.deleteMany({});
     const categories = await Category.create([
-        { name: 'Clothing', sortOrder: 100 },
-        { name: 'Accessories', sortOrder: 200 },
-        { name: 'Office', sortOrder: 300 },
-        { name: 'Gadgets', sortOrder: 400 },
-        { name: 'Home', sortOrder: 500 },
-        { name: 'Food', sortOrder: 600 },
+        { name: 'Cute', sortOrder: 100 },
+        { name: 'Funny', sortOrder: 200 },
+        { name: 'CanIHaz', sortOrder: 300 },
+        { name: '#NotACat', sortOrder: 400 },
+        { name: 'Retro', sortOrder: 500 },
+        { name: 'Angry', sortOrder: 600 },
     ]);
 
-//     await Order.deleteMany({});
-//    let curruser = await User.findOne({});
-   
-//     const orders = await Order.create([
-//         {
-//             user: curruser._id,
-//             cartItems: [],
-//             isPaid: false
-//         }
-//     ])
+    //     await Order.deleteMany({});
+    //    let curruser = await User.findOne({});
+
+    //     const orders = await Order.create([
+    //         {
+    //             user: curruser._id,
+    //             cartItems: [],
+    //             isPaid: false
+    //         }
+    //     ])
 
     //we delete all items when re-seeding the database to avoid duplicates
     await Item.deleteMany({});
