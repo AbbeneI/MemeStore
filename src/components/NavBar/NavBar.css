@@ -1,0 +1,6 @@
+.logo {
+    --x: 50px;
+    height: var(--x);
+    width: var(--x);
+    filter: invert(100%) sepia(27%) saturate(5371%) hue-rotate(180deg) brightness(107%) contrast(116%);
+}

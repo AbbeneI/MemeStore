@@ -1,0 +1,8 @@
+.shop-list-item {
+    height: 30vmin;
+    width: 40vmin;
+}
+
+.shop-list-item img {
+    max-height: 10vmin;
+}
