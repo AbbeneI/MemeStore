@@ -1,0 +1,8 @@
+.shop-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1vmin;
+    padding-top: 5vmin;
+}

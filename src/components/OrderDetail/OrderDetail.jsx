@@ -14,17 +14,24 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
         />
     );
 
+
     return (
-        <div className="OrderDetail">
+        <div className="order-detail">
+            Cart
             <div className="section-heading">
-                {order.isPaid ?
+                {/* {order.isPaid ?
                     <span>ORDER <span className="smaller">{order.orderId}</span></span>
                     :
                     <span>NEW ORDER</span>
-                }
+                } */}
                 <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
             </div>
-            <div className="cart-item-container flex-ctr-ctr flex-col scroll-y">
+            <div>
+                {cartItems}
+            </div>
+            <button onClick={() => handleCheckout()}>Checkout</button>
+
+            {/* <div className="cart-item-container flex-ctr-ctr flex-col scroll-y">
                 {cartItems.length ?
                     <>
                         {cartItems}
@@ -44,9 +51,8 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                     </>
                     :
                     <div className="hungry">Hungry?</div>
-                }
-            </div>
-        </div>
+                } */}
+        </div >
     );
 }
 // export default function OrderDetail() {

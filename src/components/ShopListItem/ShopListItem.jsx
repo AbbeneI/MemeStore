@@ -9,14 +9,14 @@ export default function ShopListItem({ shopItem, handleAddToOrder }) {
             {/* <Link to="/">Store Front</Link> */}
 
             {/* <Link to{`/items/${shopItem._id}`} >    </Link> */}
-            <Link to={itemDetail}>
-                <img src={shopItem.image} alt="" />
-                <div>{shopItem.name}</div>
+            {/* <Link to={itemDetail}> */}
+            <img src={shopItem.image} alt="" />
+            <div>{shopItem.name}</div>
 
-                <div>${shopItem.price}</div>
-                <div>{shopItem.description}</div>
-            </Link>
-            {/* <button onClick={handleAddToOrder(shopItem._id)}>Add to Cart</button> */}
+            <div>${shopItem.price}</div>
+            <div>{shopItem.description}</div>
+            {/* </Link> */}
+            <button onClick={() => handleAddToOrder(shopItem._id)}>Add to Cart</button>
         </div >
     );
 }

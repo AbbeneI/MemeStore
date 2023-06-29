@@ -1,6 +1,10 @@
 .shop-list-item {
-    height: 30vmin;
+    height: 40vmin;
     width: 40vmin;
+    border: 1px solid white;
+    border-radius: 2vmin;
+    padding: 2vmin;
+
 }
 
 .shop-list-item img {

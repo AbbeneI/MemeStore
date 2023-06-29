@@ -16,7 +16,6 @@ async function getAllForUser(req, res) {
 
 // A cart is the unpaid order for a user
 async function cart(req, res) {
-    console.log('\nDebugging Cart controller\n')
     const cart = await Order.getCart(req.user._id);
     res.json(cart);
 }
@@ -34,7 +33,10 @@ async function setItemQtyInCart(req, res) {
     await cart.setItemQty(req.body.itemId, req.body.newQty);
     res.json(cart);
 }
+// async function clearCart(req, res {
+//     const cart = 
 
+// })
 // Update the cart's isPaid property to true
 async function checkout(req, res) {
     const cart = await Order.getCart(req.user._id);

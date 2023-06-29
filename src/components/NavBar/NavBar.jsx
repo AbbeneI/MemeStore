@@ -15,8 +15,7 @@ export default function NavBar({ user, setUser }) {
             {/* <img src={Logo} alt="logo" className='logo'></img> */}
             <Link to="/">Memes</Link>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-            <Link to="/orders">Order History</Link>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <Link to="/orders">Cart</Link>
             {/* <Link to="/orders/new">New Order</Link> */}
             &nbsp;&nbsp;
             <div className='user-container'>

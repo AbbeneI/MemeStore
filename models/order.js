@@ -78,4 +78,16 @@ orderSchema.methods.setItemQty = function (itemId, newQty) {
     return cart.save();
 };
 
+// orderSchema.methods.clearCart = function (userId) {
+//     return this.findOneAndUpdate(
+//         // query object
+//         { user: userId, isPaid: false },
+//         // update doc - provides values when inserting
+//         { user: userId },
+//         // upsert option
+//         { upsert: true, new: true }
+//     );
+// };
+
+
 module.exports = mongoose.model('Order', orderSchema);

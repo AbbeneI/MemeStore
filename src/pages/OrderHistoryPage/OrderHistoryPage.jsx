@@ -34,8 +34,8 @@ export default function OrderHistory({ user, setUser }) {
                 activeOrder={activeOrder}
                 setActiveOrder={setActiveOrder}
             />
-            <OrderDetail order={activeOrder} />
-            <Link to="/orders/new" className="button btn-sm">NEW ORDER</Link>
+
+            {/* <Link to="/orders/new" className="button btn-sm">NEW ORDER</Link> */}
 
             {/* <button onClick={handleCheckToken}>Check when my login expires</button> */}
 

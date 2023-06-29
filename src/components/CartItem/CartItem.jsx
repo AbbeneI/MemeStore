@@ -2,24 +2,22 @@ import './CartItem.css';
 
 export default function CartItem({ cartItem, isPaid, handleChangeQty }) {
     return (
-        <div>
-            <div>{cartItem.item}</div>
-
+        <div class="cart-item">
             <div>{cartItem.item.name}</div>
-            <span>{cartItem.item.price.toFixed(2)}</span>
+            <div>
+                ${cartItem.cartItemPrice.toFixed(2)}</div>
             <div>
                 {!isPaid &&
-                    <button onClick={() => handleChangeQty(cartItem.item._id, cartItem.qty - 1)}></button>
+                    <button onClick={() => handleChangeQty(cartItem.item._id, cartItem.qty - 1)}>-</button>
                 }
-            </div>
-            <div>
+                {cartItem.qty}
+
                 {!isPaid &&
                     <button
                         onClick={() => handleChangeQty(cartItem.item._id, cartItem.qty + 1)}
-                    ></button>
+                    >+</button>
                 }
             </div>
-            <div>${cartItem.cartItemPrice.toFixed(2)}</div>
         </div>
     );
 }

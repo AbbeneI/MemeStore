@@ -1,4 +1,5 @@
 import ShopListItem from "../ShopListItem/ShopListItem";
+import "./ShopList.css"
 
 export default function ShopList({ shopItems, handleAddToOrder }) {
     const ShopListJsx = shopItems.map((item, idx) =>
@@ -6,8 +7,8 @@ export default function ShopList({ shopItems, handleAddToOrder }) {
             shopItem={item} key={idx} handleAddToOrder={handleAddToOrder} />
     )
     return (
-        <>
+        <div className="shop-list">
             {ShopListJsx}
-        </>
+        </div>
     )
 }

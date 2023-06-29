@@ -14,6 +14,7 @@ export default function Shop() {
     const categoriesRef = useRef([])
     const [cart, setCart] = useState(null);
     const navigate = useNavigate();
+    const [activeOrder, setActiveOrder] = useState(null);
 
     useEffect(() => {
         async function getItems() {
@@ -48,6 +49,14 @@ export default function Shop() {
         navigate('/orders');
     }
 
+    // async function clearCart() {
+    //     const updatedCart = await ordersAPI.getCart();
+    //     updatedCart.cartItems = [];
+    //     setCart(updatedCart)
+    // }
+
+
+
     return (
         <>
             <div className="side-nav">
@@ -69,6 +78,12 @@ export default function Shop() {
                         </div>
                     </div>
                 </div>
+                {/* <button onClick={() => clearCart()}>Clear Cart</button> */}
+                <OrderDetail
+                    order={cart}
+                    handleChangeQty={handleChangeQty}
+                    handleCheckout={handleCheckout}
+                />
                 {shopItems.length ?
                     <ShopList
                         shopItems={shopItems}
