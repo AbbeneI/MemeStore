@@ -8,6 +8,8 @@ import NavBar from "../../components/NavBar/NavBar"
 import Shop from "../Shop/Shop";
 
 import { getUser } from "../../utilities/users-service"
+import { useEffect } from "react"
+
 
 
 export default function App() {
