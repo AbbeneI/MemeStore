@@ -24,8 +24,6 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Shop />} />
               <Route path="/shop" element={<Shop />} />
-              {/* <Route path="/shop/items/:id" element={<ShopListItemShow />} /> */}
-              {/* <Route path="/orders/new" element={<NewOrderPage user={user} setUser={setUser} />} /> */}
               <Route path="/orders" element={<OrderHistoryPage />} />
             </Routes>
           </>

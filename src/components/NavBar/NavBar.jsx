@@ -19,7 +19,7 @@ export default function NavBar({ user, setUser }) {
             {/* <Link to="/orders/new">New Order</Link> */}
             &nbsp;&nbsp;
             <div className='user-container'>
-                <Link to="/profile">
+                <Link to="" onClick={handleLogOut}>
                     <img className='user-pfp' src={user.pfp ? user.pfp : 'https://i.pinimg.com/originals/51/2c/2d/512c2df42555717bad4833fb49cfd4bd.jpg'}></img>
                     <span>{user.name}</span>
                 </Link>
